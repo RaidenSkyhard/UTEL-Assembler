@@ -15,12 +15,13 @@ LF EQU 10               ; nueva línea
 
 ;*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 .data
-    texto db LF,LF,CR,'Hola mundo, este es un programa en ensamblador$'      ;texto que se va a mostrar en pantalla con los saltos de línea correspondientes
+    texto db LF,LF,CR,"Hola mundo, este es un programa en ensamblador$"      ;texto que se va a mostrar en pantalla con los saltos de línea correspondientes
 
 ;*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 .code                   ;inicia código del programa en donde se van a indicar todos los movimientos
 
     mov ax,@data        ;carga la dirección del segmento datos
+    mov ds,ax           ;carga la dirección en el segmento de datos
     lea dx,texto        ;carga el texto
 
     mov ah,9            ;imprime en pantalla el texto
