@@ -15,7 +15,7 @@ LF EQU 10               ; nueva línea
 
 ;*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 .data
-    texto db lf, lf, cr, '¡Hola mundo, este es un programa en ensamblador!$'      ;texto que se va a mostrar en pantalla con los saltos de línea correspondientes
+    texto db LF,LF,CR,'Hola mundo, este es un programa en ensamblador$'      ;texto que se va a mostrar en pantalla con los saltos de línea correspondientes
 
 ;*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 .code                   ;inicia código del programa en donde se van a indicar todos los movimientos
