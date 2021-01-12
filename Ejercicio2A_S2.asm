@@ -31,7 +31,7 @@
     mov ax,@data        ;cargamos el apuntodor en ax
     mov ds,ax           ;segmento de datos en AX
 
-    ;---------------------CAPTURA DE DATOS
+    ;---------------------CAPTURA DE DATOS-----------------------
     mov ah,9            ;llamada al servicio de impresión
     lea dx,texto        ;obtenemos la dirección del primer texto
     INT 21h             ;llamada al sistema operativo
@@ -48,35 +48,54 @@
     sub al,30h          ;ajuste de datos con el número 30 hexadecimal o 48 decimal en caso de que el usuario pulse una tecla de letra
     mov num2,al         ;mover la entrada a la variable num2
 
-    ;---------------------SUMA
-    mov al,num1
-    add al,num2
-    add al,30h
-    mov num3,al
 
-    mov ah,9
-    lea dx,resultado1
-    int 21h
+    ;---------------------SUMA--------------------------------
+    mov al,num1          ;movemos a la variable al el valor del num1
+    add al,num2         ;sumamos el valor del num2 a al
+    add al,30h          ;ajuste de datos con el número 30 hexadecimal o 48 decimal en caso de que el usuario pulse una tecla de letra
+    mov num3,al         ;movemos el resultado de al en el número 3
+
+    mov ah,9            ;llamada al servicio de impresión
+    lea dx,resultado1   ;movemos el texto del resultado de la suma a dx
+    int 21h             ;llamada al sistema operativo
     mov ah,2            ;servicio que exhibe resultado
-    mov dl,num3
-    int 21h
+    mov dl,num3         ;movemos a dl, el resultado de la suma
+    int 21h             ;llamada al sustema operativo
 
-    ;--------------------RESTA
-    mov al,num1
-    sub al,num2
-    add al,30h
-    mov num3,al
 
-    mov ah,9
-    lea dx,resultado2
-    int 21h
+    ;---------------------RESTA--------------------------------
+    mov al,num1          ;movemos a la variable al el valor del num1
+    sub al,num2         ;restamos el valor del num2 a al
+    add al,30h          ;ajuste de datos con el número 30 hexadecimal o 48 decimal en caso de que el usuario pulse una tecla de letra
+    mov num3,al         ;movemos el resultado de al en el número 3
+
+    mov ah,9            ;llamada al servicio de impresión
+    lea dx,resultado1   ;movemos el texto del resultado de la resta a dx
+    int 21h             ;llamada al sistema operativo
     mov ah,2            ;servicio que exhibe resultado
-    mov dl,num3
-    int 21h
+    mov dl,num3         ;movemos a dl, el resultado de la resta
+    int 21h             ;llamada al sustema operativo
 
-    ;---------------------MULTIPLICACIÓN
-    mov al,num1
-    sub al,
+    ;---------------------MULTIPLICACIÓN------------------------
+    mov al,num1          ;movemos a la variable al el valor del num1
+    mov cl,num2         ;movemos el valor de num2 a cl
+    mul cl              ;multiplicamos el valor del num2 a al
+    add al,30h          ;ajuste de datos con el número 30 hexadecimal o 48 decimal en caso de que el usuario pulse una tecla de letra
+
+
+
+    ;<<<<<<<<<<<<ERROR
+    mov num3,ax         ;<<<<<<<<<<<<<ERROR EN EL CÓDIGO, EN DESARROLLO
+    ;<<<<<<<<<<<<ERROR
+
+    
+
+    mov ah,9            ;llamada al servicio de impresión
+    lea dx,resultado1   ;movemos el texto del resultado de la multiplicación a dx
+    int 21h             ;llamada al sistema operativo
+    mov ah,2            ;servicio que exhibe resultado
+    mov dl,num3         ;movemos a dl, el resultado de la resta
+    int 21h             ;llamada al sustema operativo
 
 
 
