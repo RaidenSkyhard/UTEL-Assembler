@@ -2,6 +2,7 @@
 ;Ejercicio 3 de la Semana #2
 ;Lenguaje Ensamblador
 ;Israel González Bejarano
+;Enlace al video --------------------> https://drive.google.com/file/d/10mTflvfL-ddMW632KDEHXpTjUr2LBt97/view?usp=sharing
 
 ;Codigo para realizar operaciones de movimientos de datos
 ;NOTA: Código escrito en Visual Studio Code para posteriormente ser compilado en el emulador emu8086

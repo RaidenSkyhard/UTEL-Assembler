@@ -2,6 +2,7 @@
 ;Ejercicio 2 de la Semana #2
 ;Lenguaje Ensamblador
 ;Israel González Bejarano
+;Enlace al video --------------------> https://drive.google.com/file/d/1wKughSu4hlanbHIyNHu0T3KogRPxXiwq/view?usp=sharing
 
 ;Codigo para hacer operaciones aritméticas
 ;NOTA: Código escrito en Visual Studio Code para posteriormente ser compilado en el emulador emu8086
